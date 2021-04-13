@@ -22,12 +22,18 @@ for (var i = 0; i < cognomiDisponibili.length; i++) {
     sorted.push(cognomiDisponibili[i].toLowerCase());
 }
 
+
+
 sorted.sort();
 
 console.log(sorted);
 
+for (var i = 0; i < cognomiDisponibili.length; i++) {
+    sorted[i] = sorted[i][0].toUpperCase() + sorted[i].slice(1) ;
+}
 
 
+console.log(sorted);
 document.getElementById("surname").innerHTML = "<li>" + sorted + "</li>"
 
 
